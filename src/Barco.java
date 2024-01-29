@@ -13,6 +13,9 @@ public class Barco {
             trozos[i]=new Trozo();
         }
     }
+    public int longitud() {
+        return trozos.length;
+    }
 
     @Override
     public String toString() {
