@@ -13,14 +13,14 @@ public class Principal {
         tp.colocar(new Barco(3), new Coordenada('B', 4), TipoOrientacion.HORIZONTAL);
         //Error: 1) La coordenada debe ser válida
         Coordenada c = new Coordenada('K', 4);
-        if (!tp.colocar(new Barco(3), c, TipoOrientacion.HORIZONTAL)) ;
-        System.out.println("Coordenada no válida:" + c);
+        if (!tp.colocar(new Barco(3), c, TipoOrientacion.HORIZONTAL)) {
+            System.out.println("1) Coordenada no válida: "+c); }
         //Error: 2) No puede existir un barco en la mismas posición
-        if (!tp.colocar(new Barco(3), new Coordenada('A', 4), TipoOrientacion.HORIZONTAL)) ;
-        System.out.println("Existe un barco en la misma posición");
-        //Error: 4) Todos los trozos del barco deben estar colocados dentro del tablero
-        if (!tp.colocar(new Barco(3), new Coordenada('I', 1), TipoOrientacion.HORIZONTAL)) ;
-        System.out.println("Todos los trozos del barco deben estar colocados dentro del tablero");
+        if (!tp.colocar(new Barco(3), new Coordenada('A', 4), TipoOrientacion.HORIZONTAL)) {
+            System.out.println("2) Existe un barco en la misma posición"); }
+        //4) Todos los trozos del barco deben estar colocados dentro del tablero
+        if (!tp.colocar(new Barco(3), new Coordenada('I', 1), TipoOrientacion.HORIZONTAL)) {
+             System.out.println("4) Todos los trozos del barco deben estar colocados dentro del tablero"); }
         System.out.print(tp);
     }
 }
