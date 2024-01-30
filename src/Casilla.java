@@ -6,7 +6,9 @@ public class Casilla {
     private Trozo trozo;                      //<<R>>
 
     public Casilla(boolean agua) {
-
+        if (agua) {
+            colocarAgua();
+        }
     }
 
     public Trozo getTrozo() {
@@ -18,6 +20,7 @@ public class Casilla {
     }
 
     public void colocarTrozo(@NotNull Trozo trozo) {
+        this.agua=false;
         this.trozo=trozo;
     }
     public boolean esAgua() {
@@ -29,6 +32,6 @@ public class Casilla {
 
     @Override
     public String toString() {
-        return "|" + (agua ? "A" : trozo) + "|";
+        return "|" + (estaVacia() ? " " : (esAgua() ?  "\u25CB" : trozo)) + "|";
     }
 }

@@ -56,6 +56,22 @@ public class Coordenada {
 
     @Override
     public String toString() {
+        StringBuilder sb = new StringBuilder();
+        //Encabezado con números [columnas]
+        sb.append(" ");
+        for (int i = Coordenada.getMinColumna(); i <= Coordenada.getMaxColumna(); i++) {
+            sb.append(String.format("%d", i));
+        }
+        sb.append("\n");
+        //Filas
+        for (int i = Coordenada.getMinFila(); i <= Coordenada.getMaxFila(); i++) {
+            System.out.printf("\n%d", i);
+            sb.append(String.format("%c", Coordenada.getMinFila()));
+            for (char c = (char) Coordenada.getMinColumna(); c <= Coordenada.getMaxColumna(); c++) {
+                sb.append(String.format("%c", c));
+
+            }
+        }
         return String.format("(%c, %d)", fila, columna);
     }
 }

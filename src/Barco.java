@@ -17,6 +17,12 @@ public class Barco {
         return trozos.length;
     }
 
+    public Trozo getTrozo(int i) {
+        assert i>=0 && i<trozos.length:
+                String.format("El trozo %d no existe (longitud=%d)", i, trozos.length);
+        return trozos[i];
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
