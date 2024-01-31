@@ -1,43 +1,34 @@
 import org.jetbrains.annotations.NotNull;
 
+
+
 public class Jugador {
-    private String apodo;                        //NN, NB, NV
-    private Flota flota;                         //NN  <<R>>
-    private TableroPropio tableroPropio;         //NN  <<R>>
-    private TableroEnemigo tableroEnemigo;       //NN  <<R>>
-
-
-    public Jugador(String a, Flota f, TableroPropio p, TableroEnemigo e) {
-        setApodo(apodo);
-        setFlota(flota);
-        setTableroPropio(tableroPropio);
-        setTableroEnemigo(tableroEnemigo);
+    private String apodo;       // NN, NV, NB
+    private Flota flota;
+    private TableroPropio tableroPropio;
+    private TableroEnemigo tableroEnemigo;
+    public Jugador(String a, Flota f, TableroPropio p,TableroEnemigo e){
+        setApodo(a);
+        setFlota(f);
+        setTableroPropio(p);
+        setTableroEnemigo(e);
     }
 
-    public void setFlota(@NotNull Flota flota) {
-        this.flota = flota;
+    private void setApodo(@NotNull String a){
+        //TODO: 25/01/2024
+        this.apodo = a;
     }
 
-    public void setTableroPropio(@NotNull TableroPropio tableroPropio) {
-        this.tableroPropio = tableroPropio;
+    private void setFlota(@NotNull Flota f){
+        //TODO: 25/01/2024
     }
 
-    public void setTableroEnemigo(@NotNull TableroEnemigo tableroEnemigo) {
-        this.tableroEnemigo = tableroEnemigo;
+    private void setTableroPropio(@NotNull TableroPropio p){
+        //TODO: 25/01/2024
     }
 
-    public void setApodo(@NotNull String apodo) {
-        //TODO: VALIDACIÓN
-        this.apodo=apodo;
+    private void setTableroEnemigo(@NotNull TableroEnemigo e){
+        //TODO: 25/01/2024
     }
 
-    @Override
-    public String toString() {
-        return "Jugador{" +
-                "apodo='" + apodo + '\'' +
-                ", flota=" + flota +
-                ", tableroPropio=" + tableroPropio +
-                ", tableroEnemigo=" + tableroEnemigo +
-                '}';
-    }
 }

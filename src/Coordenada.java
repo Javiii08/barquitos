@@ -47,12 +47,15 @@ public class Coordenada {
         return columna;
     }
 
-    public static boolean esFila(char fila) {
-       return minFila <= fila && maxFila >= fila;
-   }
+    public static boolean esFila(char fila) {return minFila <= fila && maxFila >= fila;}
    public static boolean esColumna(int columna) {
         return minColumna <= columna && maxColumna >= columna;
    }
+
+    public static Coordenada generar() {
+        return new Coordenada((char) (minFila + (int) (Math.random() * (maxFila - minFila + 1))),
+                (int) (Math.random() * (maxColumna - minColumna + 1)));
+    }
 
     @Override
     public String toString() {
